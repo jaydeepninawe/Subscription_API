@@ -6,6 +6,7 @@ import {
   getAllSubscriptions,
   getSubscriptionById,
   deleteSubscription,
+  getUpcomingRenewals,
 } from '../controllers/subscription.controller.js'
 
 const subscriptionRouter = Router();
