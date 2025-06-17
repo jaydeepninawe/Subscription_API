@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import authorize from '../middlewares/auth.middleware.js'
-import { getUser, getUsers, createUser , deleteUser , updatedUser } from '../controllers/user.controller.js'
+import { getUser, getUsers, createUser , deleteUser , updateUser } from '../controllers/user.controller.js'
 
 const userRouter = Router();
 
@@ -11,7 +11,7 @@ userRouter.get('/:id', authorize, getUser);
 
 userRouter.post('/',createUser);
 
-userRouter.put('/:id',authorize,updatedUser);
+userRouter.put('/:id',authorize,updateUser);
 
 userRouter.delete('/:id', authorize, deleteUser);
 
